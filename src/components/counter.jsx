@@ -24,8 +24,10 @@ export default class Counter extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div>
+        {this.props.children}
         <span className={this.badgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={() => this.handleIncrement({ id: 1 })}
